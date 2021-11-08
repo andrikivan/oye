@@ -24,11 +24,10 @@
   </head>
   <body>
     <nav class="navbar sticky-top navbar-expand-lg">
-      
-    
       <a href="index.html">
         <img id="logo1" src="imagenes/logo.png" alt="Logo">
       </a>
+      <span id="oyeNav" class="col ms-2 align-middle fs-1">OYE</span>
       <button
         class="navbar-toggler"
         type="button"
@@ -45,21 +44,24 @@
         <div class="navbar-nav">
           <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
           <a class="nav-link active" href="canciones.html">Canciones</a>
-          <a
-            class="loginButton1 my-1 w-50 navbar-btn btn btn-info btn-md"
+          <div class="ms-2 my-1 m-auto"><a
+            class="loginButton1 navbar-btn btn btn-info btn-md"
             data-bs-toggle="modal" data-bs-target="#modalContacto"
             role="button"
             >Contacto</a>
-          <a
-            class="loginButton1 my-1 w-50 navbar-btn btn btn-primary btn-md"
+          </div>
+          <div class="ms-2 my-1 m-auto"><a
+            class="loginButton1 navbar-btn btn btn-primary btn-md"
             href="login.html"
             role="button"
             >Inicio de Sesión</a>
-          <a
-            class="loginButton1 my-1 w-50 navbar-btn btn btn-primary btn-md"
+          </div>
+          <div class="ms-2 my-1 m-auto"><a
+            class="loginButton1 colnavbar-btn btn btn-primary btn-md"
             href="registro.html"
             role="button"
             >Registro</a>
+          </div>
         </div>
       </div>
     
@@ -93,11 +95,11 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body text-start">
-                    <label for="email">Email</label>
-                    <button id="email" name="email" class="btn btn-link">info@oye.com</button>
+                    <label for="email">Correo electrónico:</label>
+                    <span id="email" name="email" class="link-info">info@oye.com</span>
                     <br>
-                    <label for="tel">Telefono</label>
-                    <button id="tel" name="tel" class="btn btn-link">+1 123 123123123</button>
+                    <label for="tel">Telefono:</label>
+                    <span id="tel" name="tel" class="link-info">+1 123 123123123</span>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -109,7 +111,9 @@
         <div class="col-md-6 mx-auto">
           <div class="row">
             <div class="col-12 col-md p-0">
-              <h1 class="display-4">OYE</h1>
+              <div class="col-md-4 my-2 offset-md-4 text-center">
+                <img id="logoPrincipal" src="imagenes/logo.png" alt="Logo"><span class="col ms-2 align-middle fs-1 oyeNombreLogo">OYE</span>
+              </div>
               <p class="lead">
                 Las mejores canciones...
               </p>
@@ -125,9 +129,9 @@
     </main>
 
     <footer class="text-center">
-      <div class="text-center">
-        Comparte la música © Derechos Reservados
-        <a class="text" href="index.html">OYE</a>
+      <div class="row">
+        <div id="footer1" class="col mx-1">Comparte la música</div>
+        <div id="footer2" class="col mx-1">© Derechos Reservados</div>
       </div>
     </footer>
 

@@ -57,3 +57,27 @@ function validarRegistro(formulario) {
     alert("¡Se ha registrado exitósamente!");
     return true;
 }
+
+function validarLogin(formulario) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!re.test(formulario.email.value)) {
+        document.getElementById("errorEmail").innerText = "Email Incorrecto";
+        formulario.email.focus();
+        return false;
+    }
+    else {
+        document.getElementById("errorEmail").innerText = "";
+    }
+  
+    if (formulario.contrasena.value.trim().length < 6) {
+        document.getElementById("errorContraseña").innerText = "Contraseña Incorrecta";
+        formulario.contrasena.focus();
+        return false;
+    }
+    else {
+        document.getElementById("errorContraseña").innerText = "";
+    }
+
+    alert("¡Inicio de Sesión Exitoso!");
+    return true;
+}
