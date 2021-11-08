@@ -1,0 +1,295 @@
+:root {
+    --primaryColor: #39a6a3;
+    --infoColor: #3d8bfd;
+    --backgroundColor: #e3e3e3;
+    --dangerColor: #cc2929;
+    --warningColor: #ed9f18;
+    --successColor: #36b267;
+    --lightColor: #ffffff;
+    --darkColor: #000000;
+  }
+
+
+  /* RESET */
+* {
+    box-sizing: border-box;
+  }
+  .alert-messages {
+    text-align: center;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--backgroundColor);
+  }
+  
+  .page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primaryColor);
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  
+  h1 {
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    font-family: "Roboto", sans-serif;
+  }
+  .justificar {
+    text-align: justify;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: var(--primaryColor);
+    box-shadow: 0 6px 6px -3px #999;
+  }
+  
+  .navbar #navbarButton,
+  .navbar .navbar-brand,
+  #navbarOptions .nav-link {
+    color: var(--lightColor);
+  }
+  
+  .navbar #navbarButton:hover {
+    color: var(--darkColor);
+  }
+  .navbar .navbar-brand:hover {
+    color: var(--darkColor);
+  }
+  .navbar #navbarOptions .nav-link:hover {
+    color: var(--darkColor);
+  }
+  
+  .navbar #navbarButton {
+    border: none;
+    margin-left: 1px;
+  }
+  .navbar #logo1 {
+    margin-left: 5px;
+  }
+  .navbar #navbarOptions .nav-link {
+    margin: 0px 10px;
+  }
+  .navbar #loginButton1,
+  .navbar #loginButton2 {
+    border: solid 1px white;
+    margin-right: 3px;
+  }
+  
+  .navbar .op-user {
+    padding-right: 5px;
+  }
+  
+  .navbar .op-user .nav-link {
+    color: var(--lightColor);
+  }
+  
+  @media (min-width: 0px) {
+    .navbar #logo1 {
+      display: none;
+    }
+    .navbar #logo2 {
+      display: flex;
+      max-width: 54px;
+      max-height: 54px;
+    }
+  }
+  @media (min-width: 992px) {
+    .navbar #logo1 {
+      display: flex;
+      max-width: 110px;
+      max-height: 50px;
+    }
+    .navbar #logo2 {
+      display: none;
+    }
+  }
+  
+  .navbar-collapse {
+    justify-content: center;
+  }
+  
+  @media (min-width: 0px) {
+    .navbar #loginButton1 {
+      display: flex;
+    }
+    .navbar #loginButton2 {
+      display: none;
+    }
+  }
+  @media (min-width: 992px) {
+    .navbar #loginButton1 {
+      display: none;
+    }
+    .navbar #loginButton2 {
+      display: flex;
+    }
+  }
+  
+  @media (min-width: 0px) {
+    .navbar #userButton1 {
+      display: flex;
+    }
+    .navbar #userButton2 {
+      display: none;
+    }
+  }
+  @media (min-width: 992px) {
+    .navbar #userButton1 {
+      display: none;
+    }
+    .navbar #userButton2 {
+      display: flex;
+    }
+  }
+  
+  
+  /* Footer */
+  footer {
+    background-color: var(--primaryColor);
+    color: var(--lightColor);
+    margin-top: auto;
+    z-index: 99999;
+  }
+  footer a {
+    color: var(--lightColor);
+  }
+  
+  /* Buttons */
+  .btn-primary, .btn-primary:focus {
+    background-color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    font-weight: bold;
+    font-family: var(--bs-font-sans-serif);
+    cursor: pointer;
+    transition: all 2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--lightColor);
+    color: var(--primaryColor);
+    font-weight: bold;
+    border: 1px solid var(--primaryColor);
+    box-shadow: 500px 0 white inset, -500px 0 white inset;
+  }
+
+  .btn-info, .btn-info:focus {
+    background-color: var(--infoColor);
+    border: 1px solid var(--infoColor);
+    color: var(--lightColor);
+    font-weight: bold;
+    font-family: var(--bs-font-sans-serif);
+    cursor: pointer;
+    transition: all 2s;
+  }
+  
+  .btn-info:hover {
+    background-color: var(--lightColor);
+    color: var(--infoColor);
+    font-weight: bold;
+    border: 1px solid var(--infoColor);
+    box-shadow: 500px 0 white inset, -500px 0 white inset;
+  }
+  
+  .btn-danger, .btn-danger:focus {
+    background-color: var(--dangerColor);
+    border: 1px solid var(--dangerColor);
+    font-weight: bold;
+    font-family: var(--bs-font-sans-serif);
+    cursor: pointer;
+    transition: all 2s;
+  }
+  
+  .btn-danger:hover {
+    background-color: var(--lightColor);
+    color: var(--dangerColor);
+    font-weight: bold;
+    border: 1px solid var(--dangerColor);
+    box-shadow: 500px 0 white inset, -500px 0 white inset;
+  }
+  
+  label {
+    color: black;
+  }
+
+  /* enable absolute positioning */
+.inner-addon {
+    position: relative;
+  }
+  
+  /* style icon */
+  .inner-addon .glyphicon {
+    position: absolute;
+    padding: 11px;
+    pointer-events: none;
+  }
+  
+  /* align icon */
+  .left-addon .glyphicon {
+    left: 0px;
+  }
+  .right-addon .glyphicon {
+    right: 0px;
+  }
+  
+  /* add padding  */
+  .left-addon input {
+    padding-left: 40px;
+  }
+  .right-addon input {
+    padding-right: 30px;
+  }
+  
+  /* Inicio */
+  
+  #contacto {
+    color: var(--lightColor);
+  }
+  #contacto .form-group label {
+    color: var(--lightColor);
+  }
+  
+  .slider-desc{
+    color: white;
+      text-shadow: 1px 1px 1px rgb(255 255 255), -1px -1px 1px rgb(0 0 0 / 40%);
+      font-size: x-large;
+  }
+  
+  .slider-sub{
+    background-color: var(--primaryColor);
+    color: white;
+  }
+  .slider-logo{
+    height: 400px;
+  }
+  
+  .slider-img{
+    opacity: 50%;
+  }
