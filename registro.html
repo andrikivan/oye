@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
     <!-- scripts -->
     <script src="js/scripts.js"></script>
-    <!-- fuentes -->
     <!-- fuentes -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -21,10 +21,15 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"/>
 
-    <title>Registro</title>
+    <title>OYE - Registro</title>
   </head>
   <body>
     <nav class="navbar sticky-top navbar-expand-lg">
+      
+    
+      <a href="index.html">
+        <img id="logo1" src="imagenes/logo.png" alt="Logo">
+      </a>
       <button
         class="navbar-toggler"
         type="button"
@@ -37,60 +42,44 @@
       >
         <i class="fas fa-bars" id="navbarIcon"></i>
       </button>
-    
-      <a href="index.html">
-        <img id="logo1" src="imagenes/logo.png" alt="Logo">
-        <img id="logo2" src="imagenes/logo.png" alt="Logo">
-      </a>
-      
-      <a
-        class="navbar-btn btn btn-info btn-md"
-        data-bs-toggle="modal" data-bs-target="#modalContacto"
-        role="button"
-        id="loginButton1"
-        >Contacto</a
-      >
-      <a
-        class="navbar-btn btn btn-primary btn-md"
-        href="login.html"
-        role="button"
-        id="loginButton1"
-        >Inicio de Sesión</a
-      >
-      <a
-        class="navbar-btn btn btn-primary btn-md"
-        href="registro.html"
-        role="button"
-        id="loginButton1"
-        >Registro</a
-      >
-    
       <div class="collapse navbar-collapse" id="navbarOptions">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
           <a class="nav-link" href="canciones.html">Canciones</a>
+          <a
+            class="loginButton1 my-1 w-50 navbar-btn btn btn-info btn-md"
+            data-bs-toggle="modal" data-bs-target="#modalContacto"
+            role="button"
+            >Contacto</a>
+          <a
+            class="loginButton1 my-1 w-50 navbar-btn btn btn-primary btn-md"
+            href="login.html"
+            role="button"
+            >Inicio de Sesión</a>
+          <a
+            class="loginButton1 my-1 w-50 navbar-btn btn btn-primary btn-md"
+            href="registro.html"
+            role="button"
+            >Registro</a>
         </div>
       </div>
     
       <a
-        class="navbar-btn btn btn-primary btn-info btn-md"
+        class="loginButton2 navbar-btn btn btn-info btn-md"
         data-bs-toggle="modal" data-bs-target="#modalContacto"
         role="button"
-        id="loginButton2"
         >Contacto</a
       >
       <a
-        class="navbar-btn btn btn-primary btn-md"
+        class="loginButton2 navbar-btn btn btn-primary btn-md"
         href="login.html"
         role="button"
-        id="loginButton2"
         >Inicio de Sesión</a
       >
       <a
-        class="navbar-btn btn btn-primary btn-md"
+        class="loginButton2 navbar-btn btn btn-primary btn-md"
         href="registro.html"
         role="button"
-        id="loginButton2"
         >Registro</a
       >
     </nav>
@@ -118,51 +107,87 @@
           </div>
         </div>
         <!-- fin Modal CONTACTO-->
-        <div class="py-5 bg-light">
-          <div class="col-md-6 mx-auto">
-            <h2 class="mb-1">Registro</h2>
-            <form action="">
-              <div class="mb-1 form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre">
-              </div>
-              <div class="mb-1 form-group">
-                <label for="apellido">Apellido</label>
-                <input type="text" class="form-control" id="apellido" name="apellido">
-              </div>
-              <div class="mb-1 form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email">
-              </div>
-              <div class="mb-1 form-group">
-                <label for="password">Contraseña</label>
-                <input type="password" class="form-control" id="password" name="password">
-              </div>
-              <div class="mb-1 form-group">
-                <label for="repeatPassword">Confirmación de contraseña</label>
-                <input type="password" class="form-control" id="repeatPassword" name="repeatPassword">
-              </div>
-              <div class="mb-1 form-group">
-                <label for="telefono">Telefono</label>
-                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Teléfono">
-              </div>
-              <div class="mb-1 form-group">
-                <label for="pais">País</label>
-                <select id="pais" class="form-control" name="pais">
-                  <option value="Argentina">Argentina</option>
-                  <option value="Brasil">Brasil</option>
-                  <option value="Paraguay">Paraguay</option>
-                </select>
-              </div>
-              <div class="mb-1 form-check">
-                <input required class="form-check-input" type="checkbox" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Aceptar<a href="" target="_blank"> Términos y Condiciones</a>.
-                </label>
-              </div>
-              <button class="left btn btn-primary" type="submit">Continuar</button>
-            </form>
-
+        <div class="container my-4">
+          <div class="row">
+            <div class="col-md-6 my-2 offset-md-3 text-center">
+                <img id="logoPrincipal" src="imagenes/logo.png" alt="Logo">
+            </div>
+            <div class="card col-md-6 offset-md-3">
+                <div class="card-header fw-bold bg-white">
+                    <h3 class="text-center fw-bold">Complete sus datos</h3>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="row">
+                            <div class="">
+                              <div class="form-group m-3">
+                                <label for="email">Correo electrónico *</label><span id="errorEmail" class="error"></span>
+                                <div class="inner-addon left-addon">
+                                      <i class="fas fa-user glyphicon border-end iconoPriCol"></i>
+                                  <input required type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico">
+                                </div>
+                              </div>
+                              <div class="form-group m-3">
+                                  <label for="contrasena">Contraseña *</label><span id="errorContraseña" class="error"></span>
+                                <div class="inner-addon left-addon">
+                                  <i class="fas fa-lock glyphicon border-end iconoPriCol"></i>
+                                  <input required type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña">
+                                </div>
+                              </div>
+                              <div class="form-group m-3">
+                                <label for="repetirContrasena">Confirmación de contraseña *</label><span id="errorContraseñaDistinta" class="error"></span>
+                                <div class="inner-addon left-addon">
+                                  <i class="fas fa-lock glyphicon border-end iconoPriCol"></i>
+                                  <input required type="password" class="form-control" id="repetirContrasena" name="repetirContrasena" placeholder="Confirmación de contraseña">
+                                </div>
+                              </div>
+                              <div class="form-group m-3">
+                                <label for="genero">Género musical favorito *</label><span id="errorGenero" class="error"></span>
+                                <select type="text" class="form-select" id="genero" name="genero" aria-placeholder="Seleccione">
+                                  <option value="" selected>Seleccione...</option>
+                                  <option value="Rock">Rock</option>
+                                  <option value="Balada">Balada</option>
+                                  <option value="Salsa">Salsa</option>
+                                  <option value="Otro">Otro</option>
+                                </select>
+                              </div>
+                              <div class="form-group m-3">
+                                  <label ><strong>Edad *</strong></label><span id="errorEdad" class="error"></span>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="edad" id="exampleRadios1" value="1">
+                                    <label class="form-check-label" for="exampleRadios1">
+                                      Menor a 20
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="edad" id="exampleRadios2" value="2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                      20 a 40
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="edad" id="exampleRadios3" value="3">
+                                    <label class="form-check-label" for="exampleRadios3">
+                                      Mayor a 40
+                                    </label>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="form-check">
+                              <input required class="form-check-input" type="checkbox" id="terminos">
+                              <label class="form-check-label" for="terminos">
+                                Aceptar<a href=""> Términos y Condiciones</a>.
+                              </label><span id="errorTerminos" class="error"></span>
+                          </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" onclick="return validarRegistro(this.form)" class="btn btn-primary">Continuar</button>
+                            </br>
+                            <small><a href="login.html">¿Ya tiene una cuenta? Inicie sesión aquí</a></small>
+                        </div>
+                    </form>
+                </div>
+            </div>   
           </div>
         </div>
       </div>
