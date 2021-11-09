@@ -81,3 +81,49 @@ function validarLogin(formulario) {
     alert("¡Inicio de Sesión Exitoso!");
     return true;
 }
+
+
+
+//Funciones canciones
+
+function mostrarTop3() {
+    // se requiere iniciar un servidor para que esto funcione
+    // en visual studio code utilizo la extensión Live Server
+    var peticion = new XMLHttpRequest(); 
+    peticion.open('GET','http://127.0.0.1:5500/datos.json');
+    var top3Canciones=[0,0,0];
+    peticion.onload = function() {
+        if (peticion.status == 200) {
+            var datos = JSON.parse(peticion.response);
+            for (i = 0; i < datos.canciones.length; i++) {
+                if (datos.canciones[i].reproducciones > datos.canciones[top3Canciones[0]].reproducciones){
+                    top3Canciones[2]=top3Canciones[1];
+                    top3Canciones[1]=top3Canciones[0];
+                    top3Canciones[0]=i;
+                    console.log("Puesto1",datos.canciones[i].reproducciones,datos.canciones[top3Canciones[0]].reproducciones);
+                } else if (datos.canciones[i].reproducciones > datos.canciones[top3Canciones[1]].reproducciones){
+                    top3Canciones[2]=top3Canciones[1];
+                    top3Canciones[1]=i;
+                    console.log("Puesto2",datos.canciones[i].reproducciones,datos.canciones[top3Canciones[1]].reproducciones);
+                }
+                else if (datos.canciones[i].reproducciones > datos.canciones[top3Canciones[2]].reproducciones){
+                    top3Canciones[2]=i;
+                    console.log("Puesto3",datos.canciones[i].reproducciones,datos.canciones[top3Canciones[2]].reproducciones);
+                }
+            
+            }
+            
+            for (k = 0; k < 3; k++) {
+                document.getElementById("nombre"+k).innerText = datos.canciones[top3Canciones[k]].nombre;
+                document.getElementById("audio"+k).src= "canciones/"+datos.canciones[top3Canciones[k]].ruta;
+            }
+        }
+        
+        
+    };
+    peticion.send();
+    
+    
+    
+    
+}

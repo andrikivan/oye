@@ -301,6 +301,12 @@ label {
   filter: hue-rotate(180deg); 
 }
 
+@media (max-width: 426px) {
+  #nombre0,#nombre1,#nombre2,#nombresHead {
+    display: none;
+  }
+}
+
 #contenedorInicio {
   background-color: var(--backgroundColor);
 }
