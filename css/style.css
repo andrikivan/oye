@@ -293,6 +293,18 @@ label {
   font-weight: bold;
 }
 
+#rotarImagen{
+  transform: rotateX(180deg);
+  -webkit-filter: contrast(1.5); /* 1.5 = 150% */ 
+  filter: contrast(1.5);
+  -webkit-filter: hue-rotate(180deg); 
+  filter: hue-rotate(180deg); 
+}
+
+#contenedorInicio {
+  background-color: var(--backgroundColor);
+}
+
 #contacto {
   color: var(--lightColor);
 }
