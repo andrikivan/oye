@@ -127,7 +127,7 @@ function listarCanciones(){ // muestra las canciones que hay en el json
         if (peticion.status == 200) {
             var datos = JSON.parse(peticion.response); //si está correcto, comienza a recorrer el json
             for (i = 0; i < datos.canciones.length; i++) {
-                codigo=codigo+'<div class="divCancion card"><div class="card-header"><img class="iconoCanciones" src="imagenes/icon_'+datos.canciones[i].icono+'.svg"></div><div class="p-0 card-body"><h5 class="fw-bold text-info">'+datos.canciones[i].nombre+'</h5><div><audio class="" id="audio2" src="canciones/'+datos.canciones[i].ruta+'" controls></audio></div></div></div>';
+                codigo=codigo+'<div class="divCancion card"><div class="card-header"><img class="iconoCanciones" src="imagenes/icon_'+datos.canciones[i].icono+'.svg"></div><div class="p-0 card-body"><h5 class="fw-bold text-info">'+datos.canciones[i].nombre+'</h5><div><audio id="audio2" src="canciones/'+datos.canciones[i].ruta+'" controls>Su navegador no soporta la reproducción del <code>audio</code></audio></div></div></div>';
             }// coloca las canciones dentro del div con id canciones
             data.innerHTML = codigo; 
         }
