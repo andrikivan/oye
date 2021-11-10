@@ -119,6 +119,8 @@ function mostrarTop3() {
 }
 
 function listarCanciones(){ // muestra las canciones que hay en el json
+    // se requiere iniciar un servidor para que esto funcione
+    // en visual studio code utilizo la extensión Live Server
     const data = document.querySelector("#canciones");
     var peticion = new XMLHttpRequest(); 
     peticion.open('GET','http://127.0.0.1:5500/datos.json');
