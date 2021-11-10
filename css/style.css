@@ -10,10 +10,12 @@
 }
 
 
-  /* RESET */
+  /*--------  RESET -------- */
 * {
     box-sizing: border-box;
 }
+
+/* -------- Configuración general del sitio web -------- */
 
 .error {
   margin-left: 2px;
@@ -58,7 +60,7 @@ h2, h3, h4, h5, h6, p {
   text-align: justify;
 }
 
-/* Navbar */
+/*-------- Navbar --------  */
 #oyeNav {
   min-height: 50px;
   min-width: 50px;
@@ -171,7 +173,7 @@ h2, h3, h4, h5, h6, p {
 }
 
 
-/* Footer */
+/*--------  Footer -------- */
 footer {
   background-color: var(--primaryColor);
   color: var(--lightColor);
@@ -199,7 +201,7 @@ footer a {
     text-align: end;
   }
 }
-/* Buttons */
+/*--------  Botones -------- */
 .btn-primary, .btn-primary:focus {
   background-color: var(--primaryColor);
   border: 1px solid var(--primaryColor);
@@ -256,35 +258,7 @@ label {
   color: var(--darkColor);
 }
 
-/* enable absolute positioning */
-.inner-addon {
-    position: relative;
-}
-
-/* style icon */
-.inner-addon .glyphicon {
-  position: absolute;
-  padding: 11px;
-  pointer-events: none;
-}
-
-/* align icon */
-.left-addon .glyphicon {
-  left: 0px;
-}
-.right-addon .glyphicon {
-  right: 0px;
-}
-
-/* add padding  */
-.left-addon input {
-  padding-left: 40px;
-}
-.right-addon input {
-  padding-right: 30px;
-}
-
-/* Inicio */
+/*--------  Inicio -------- */
 .oyeNombreLogo {
   min-height: 50px;
   min-width: 50px;
@@ -293,45 +267,97 @@ label {
   font-weight: bold;
 }
 
-#rotarImagen{
+#editarImagen{ /* transformo la imagen */
   transform: rotateX(180deg);
-  -webkit-filter: contrast(1.5); /* 1.5 = 150% */ 
+  -webkit-filter: contrast(1.5);
   filter: contrast(1.5);
   -webkit-filter: hue-rotate(180deg); 
   filter: hue-rotate(180deg); 
 }
 
-@media (max-width: 426px) {
+@media (max-width: 425px) {
   #nombre0,#nombre1,#nombre2,#nombresHead {
     display: none;
   }
 }
 
-#contenedorInicio {
-  background-color: var(--backgroundColor);
+/*--------  Canciones -------- */
+@media (max-width: 580px) {
+  #canciones {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 150px;
+  }
 }
 
-#contacto {
-  color: var(--lightColor);
-}
-#contacto .form-group label {
-  color: var(--lightColor);
-}
-
-.slider-desc{
-  color: var(--lightColor);
-    text-shadow: 1px 1px 1px rgb(255 255 255), -1px -1px 1px rgb(0 0 0 / 40%);
-    font-size: x-large;
+@media (min-width: 650px) {
+  #canciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 150px;
+  }
 }
 
-.slider-sub{
-  background-color: var(--primaryColor);
-  color: var(--lightColor);
-}
-.slider-logo{
-  height: 400px;
+@media (min-width: 1024px) {
+  #canciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 150px;
+  }
 }
 
-.slider-img{
-  opacity: 50%;
+/*--------  configuración para la barra de búsqueda de canciones -------- */
+.iconoPriCol {
+  color: var(--primaryColor);
+}
+
+.inner-addon {
+  position: relative;
+}
+
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 11px;
+  pointer-events: none;
+}
+
+.left-addon .glyphicon {
+  left: 0px;
+}
+.right-addon .glyphicon {
+  right: 0px;
+}
+
+.left-addon input {
+  padding-left: 40px;
+}
+.right-addon input {
+  padding-right: 30px;
+}
+
+.listaDeCanciones {
+  border-radius: 8px;
+  padding: 5px;
+  background: rgb(57, 166, 163);
+  background: linear-gradient(90deg, rgba(57, 166, 163, 0.47942927170868344) 0%, 
+                                      rgba(255, 255, 255, 1) 100% );
+  box-shadow: 20px 20px 60px #a7b2b8, 
+              -20px -20px 60px #e3f0f8;
+}
+
+#buscarCanciones {
+  background-position: 10px 12px; 
+  background-repeat: no-repeat; 
+  width: 100%; 
+  font-size: 16px; 
+  padding: 7px 20px 6px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+.iconoCanciones {
+  max-width: 50px;
 }
